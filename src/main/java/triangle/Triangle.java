@@ -2,10 +2,10 @@ package triangle;
 
 public class Triangle {
 
-	final int TR_EQUILATERAL = 1; // СЂР°РІРЅРѕСЃС‚РѕСЂРѕРЅРЅРёР№
-	final int TR_ISOSCELES = 2;   // СЂР°РІРЅРѕР±РµРґСЂРµРЅРЅС‹Р№
-	final int TR_ORDYNARY = 4;    // РѕР±С‹С‡РЅС‹Р№
-	final int TR_RECTANGULAR = 8; // РїСЂСЏРјРѕСѓРіРѕР»СЊРЅС‹Р№
+	final int TR_EQUILATERAL = 1; // равносторонний
+	final int TR_ISOSCELES = 2;   // равнобедренный
+	final int TR_ORDYNARY = 4;    // обычный
+	final int TR_RECTANGULAR = 8; // прямоугольный
 	
 	
 	private double a;
@@ -75,27 +75,27 @@ public class Triangle {
 		
 		if ((a*a+b*b == c*c) || (b*b + c*c == a*a)||(a*a + c*c == b*c))
 		{
-			final_state = final_state|TR_RECTANGULAR; // РїСЂСЏРјРѕСѓРіРѕР»СЊРЅС‹Р№
+			final_state = final_state|TR_RECTANGULAR; // прямоугольный
 		}
 		
 		
 		if (a==b && b==c && a==c)
 		{
-			final_state = final_state|TR_EQUILATERAL; // СЂР°РІРЅРѕСЃС‚РѕСЂРѕРЅРЅРёР№
+			final_state = final_state|TR_EQUILATERAL; // равносторонний
 		}
 		
 		if (a==b || b==c || a==c)
 		{
-			final_state = final_state|TR_ISOSCELES; // СЂР°РІРЅРѕР±РµРґСЂРµРЅРЅС‹Р№
+			final_state = final_state|TR_ISOSCELES; // равнобедренный
 		}
 		
 		if (final_state == 0)
 		{
-			return TR_ORDYNARY; // РѕР±С‹С‡РЅС‹Р№
+			return TR_ORDYNARY; // обычный
 		}
 		else
 		{
-			return final_state; // РєРѕРјР±РёРЅР°С†РёСЏ РїСЂРёР·РЅР°РєРѕРІ
+			return final_state; // комбинация признаков
 		}	
 	}
 	
