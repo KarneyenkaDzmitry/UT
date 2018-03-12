@@ -30,7 +30,7 @@ public class TriangleTestNG {
         };
     }
 
-    @Test(dataProvider = "negativeTests")
+    @Test(dataProvider = "negativeTests", groups = "negative")
     public void testGetMessageNegative(Double a, Double b, Double c) {
         Triangle triangle = new Triangle(a, b, c);
         triangle.checkTriangle();
@@ -65,19 +65,19 @@ public class TriangleTestNG {
         }
     }
 
-    @Test(dataProvider = "negativeTests")
+    @Test(dataProvider = "negativeTests", groups = "negative")
     public void testCheckTriangleNegative(Double a, Double b, Double c) {
         Triangle triangle = new Triangle(a, b, c);
         assertFalse(triangle.checkTriangle());
     }
 
-    @Test(dataProvider = "negativeTests", expectedExceptions = Exception.class)
+    @Test(dataProvider = "negativeTests", expectedExceptions = Exception.class, groups = "negative")
     public void testDetectTriangleNegative(Double a, Double b, Double c) {
         Triangle triangle = new Triangle(a, b, c);
         triangle.detectTriangle();
     }
 
-    @Test(dataProvider = "negativeTests", expectedExceptions = Exception.class)
+    @Test(dataProvider = "negativeTests", expectedExceptions = Exception.class, groups = "negative")
     public void testGetSquareNegative(Double a, Double b, Double c) {
         Triangle triangle = new Triangle(a, b, c);
         triangle.getSquare();
@@ -111,7 +111,7 @@ public class TriangleTestNG {
         };
     }
 
-    @Test(dataProvider = "positiveTests")
+    @Test(dataProvider = "positiveTests", groups = "positive")
     public void testGetMessagePositive(Double a, Double b, Double c, Double expectedDetection, Double ExpectedSquare) {
         Triangle triangle = new Triangle(a, b, c);
         triangle.checkTriangle();
@@ -119,19 +119,19 @@ public class TriangleTestNG {
         assertEquals(triangle.getMessage(), "");
     }
 
-    @Test(dataProvider = "positiveTests")
+    @Test(dataProvider = "positiveTests", groups = "positive")
     public void testCheckTrianglePositive(Double a, Double b, Double c, Double expectedDetection, Double ExpectedSquare) {
         Triangle triangle = new Triangle(a, b, c);
         assertTrue(triangle.checkTriangle());
     }
 
-    @Test(dataProvider = "positiveTests")
+    @Test(dataProvider = "positiveTests", groups = "positive")
     public void testDetectTrianglePositive(Double a, Double b, Double c, Double expectedDetection, Double ExpectedSquare) {
         Triangle triangle = new Triangle(a, b, c);
         assertEquals((double) triangle.detectTriangle(), expectedDetection);
     }
 
-    @Test(dataProvider = "positiveTests")
+    @Test(dataProvider = "positiveTests", groups = "positive")
     public void testGetSquarePositive(Double a, Double b, Double c, Double expectedDetection, Double ExpectedSquare) {
         Triangle triangle = new Triangle(a, b, c);
         assertEquals(triangle.getSquare(), ExpectedSquare);

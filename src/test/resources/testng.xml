@@ -5,6 +5,16 @@
             <class name="triangle.TriangleTestNG"/>
         </classes>
     </test>
+    <!--<test name="NegativeCase">
+        <groups>
+            <run>
+                <include name="negativeTests"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="triangle.TriangleTestNG"/>
+        </classes>
+    </test>-->
     <!--It is prompts for myself-->
     <!--<test name="SampleTestTwo">
         <classes>
