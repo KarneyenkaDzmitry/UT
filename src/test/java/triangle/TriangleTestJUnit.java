@@ -41,7 +41,7 @@ public class TriangleTestJUnit {
         if (expectedSquare == 0.0) {
             builder.append("expected of getSquare()=[Exception], ");
         } else {
-            builder.append("expected of detectionTriangle()=[").append(expectedSquare).append("].\"");
+            builder.append("expected of getSquare()=[").append(expectedSquare).append("].\"");
         }
         return builder.toString();
     }
@@ -60,7 +60,7 @@ public class TriangleTestJUnit {
                 {"Positive Test", new ArrayList<>(Arrays.asList(4.0, 5.0, 3.0, 8.0, 6.0))},
                 {"Positive Test", new ArrayList<>(Arrays.asList(65.00, 72.00, 97.00, 8.0, 2340.00))},
                 {"Positive Test", new ArrayList<>(Arrays.asList(68.00, 285.00, 293.00, 8.0, 9690.00))},
-                {"Positive Test", new ArrayList<>(Arrays.asList(3.00, 3.00, 3 * 1.4142135623730950488016887242097, 10.0, 4.50))},
+                {"Positive Test", new ArrayList<>(Arrays.asList(3.00, 3.00, Math.sqrt(3.0*3.0+3.0*3.0), 10.0, 4.50))},
                 {"Positive Test", new ArrayList<>(Arrays.asList(3.00, 3.00, 5.00, 2.0, 4.14578098794425))},
                 {"Positive Test", new ArrayList<>(Arrays.asList(10.00, 10.00, 15.00, 2.0, 49.607837082461074))},
                 {"Positive Test", new ArrayList<>(Arrays.asList(97.00, 97.00, 123.00, 2.0, 4613.217444203124))},
